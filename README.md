@@ -18,7 +18,7 @@ Go >= [1.20](https://golang.org/dl/)
 
 # Install
 
-Use the following command: `go install github.com/righettod/timesheet-utils`.
+Use the following command: `go install github.com/righettod/timesheet-utils@latest`.
 
 # References
 
