@@ -9,6 +9,7 @@ This project provides a program that I used to know the number of working days a
 ```bash
 $ timesheet-utils
 [+] April information:
+12 working days so 96  working hours until now.
 19 working days so 152 working hours in total.
 ```
 
