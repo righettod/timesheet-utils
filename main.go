@@ -15,13 +15,15 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	//See https://luxembourg.public.lu/en/living/quality-of-life/jours-feries-legaux.html for Luxembourg Public holidays
+	//See https://luxembourg.public.lu/en/living/quality-of-life/jours-feries-legaux.html
+	//for Luxembourg Public holidays
 	publicHolidays := make([]string, 11)
 	publicHolidays[0] = fmt.Sprintf("%d%s", currentTime.Year(), "0101")
-	publicHolidays[1] = fmt.Sprintf("%d%s", currentTime.Year(), "0401")
+	publicHolidays[1] = fmt.Sprintf("%d%s", currentTime.Year(), "0421")
 	publicHolidays[2] = fmt.Sprintf("%d%s", currentTime.Year(), "0501")
 	publicHolidays[3] = fmt.Sprintf("%d%s", currentTime.Year(), "0509")
-	publicHolidays[4] = fmt.Sprintf("%d%s", currentTime.Year(), "0520")
+	publicHolidays[4] = fmt.Sprintf("%d%s", currentTime.Year(), "0529")
+	publicHolidays[5] = fmt.Sprintf("%d%s", currentTime.Year(), "0609")
 	publicHolidays[6] = fmt.Sprintf("%d%s", currentTime.Year(), "0623")
 	publicHolidays[7] = fmt.Sprintf("%d%s", currentTime.Year(), "0815")
 	publicHolidays[8] = fmt.Sprintf("%d%s", currentTime.Year(), "1101")
