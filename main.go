@@ -2,10 +2,10 @@ package main
 
 import (
 	"fmt"
+	"strconv"
 	"time"
 
 	"github.com/fatih/color"
-
 	"golang.org/x/exp/slices"
 )
 
@@ -43,7 +43,8 @@ func main() {
 			}
 		}
 	}
-	color.Cyan("[+] %s information:\n", currentTime.Format("January"))
-	fmt.Printf("%-02d working days so %-03d working hours until now.\n", workingDaysCountUntilNow, workingDaysCountUntilNow*8)
-	fmt.Printf("%-02d working days so %-03d working hours in total.\n", workingDaysCount, workingDaysCount*8)
+	var coloredText = color.New(color.FgCyan).SprintFunc()
+	var workingDaysCountHours = strconv.Itoa(workingDaysCount * 8)
+	fmt.Printf("\U0001F4C5 %-02d working days so %-03d working hours until %s.\n", workingDaysCountUntilNow, workingDaysCountUntilNow*8, currentTime.Format("02/01/2006"))
+	fmt.Printf("\U0001F4CA %-02d working days so %-03s working hours in total.\n", workingDaysCount, coloredText(workingDaysCountHours))
 }
