@@ -18,16 +18,28 @@ func main() {
 	//See https://luxembourg.public.lu/en/living/quality-of-life/jours-feries-legaux.html
 	//for Luxembourg Public holidays
 	publicHolidays := make([]string, 11)
+	// Format MMDD
+	// Nouvel An
 	publicHolidays[0] = fmt.Sprintf("%d%s", currentTime.Year(), "0101")
-	publicHolidays[1] = fmt.Sprintf("%d%s", currentTime.Year(), "0421")
+	// Lundi de Pâques
+	publicHolidays[1] = fmt.Sprintf("%d%s", currentTime.Year(), "0406")
+	// Premier Mai
 	publicHolidays[2] = fmt.Sprintf("%d%s", currentTime.Year(), "0501")
+	// la Journée de l'Europe
 	publicHolidays[3] = fmt.Sprintf("%d%s", currentTime.Year(), "0509")
-	publicHolidays[4] = fmt.Sprintf("%d%s", currentTime.Year(), "0529")
-	publicHolidays[5] = fmt.Sprintf("%d%s", currentTime.Year(), "0609")
+	// Ascension
+	publicHolidays[4] = fmt.Sprintf("%d%s", currentTime.Year(), "0514")
+	// Lundi de Pentecôte
+	publicHolidays[5] = fmt.Sprintf("%d%s", currentTime.Year(), "0525")
+	// Fête nationale
 	publicHolidays[6] = fmt.Sprintf("%d%s", currentTime.Year(), "0623")
+	// Assomption
 	publicHolidays[7] = fmt.Sprintf("%d%s", currentTime.Year(), "0815")
+	// Toussaint
 	publicHolidays[8] = fmt.Sprintf("%d%s", currentTime.Year(), "1101")
+	// Noël
 	publicHolidays[9] = fmt.Sprintf("%d%s", currentTime.Year(), "1225")
+	// Saint Étienne
 	publicHolidays[10] = fmt.Sprintf("%d%s", currentTime.Year(), "1226")
 	//See https://stackoverflow.com/a/73880886 for the detail of the trick
 	var daysInMonth = 32 - (time.Date(currentTime.Year(), currentTime.Month(), 32, 0, 0, 0, 0, loc)).Day()
